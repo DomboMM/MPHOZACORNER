@@ -1,0 +1,156 @@
+/* === Reset Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === Base Styles === */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFD699; /* kota yellow */
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* === Header === */
+header {
+    background: #FF6F3C;
+    color: white;
+    padding: 1.5em;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+}
+
+/* === Navigation === */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #E63946; /* deep red highlight */
+}
+
+/* === Main Content === */
+main {
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    color: #E63946;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 1em;
+    font-size: 1rem;
+}
+
+/* === Menu Page (Grid Layout) === */
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.menu-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.menu-item h3 {
+    margin: 10px 0;
+    color: #FF6F3C;
+}
+
+/* === Enquiry Form === */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background: #FF6F3C;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #E63946;
+}
+
+/* === Footer === */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* === Responsive Design === */
+@media (max-width: 992px) {
+    .menu-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
