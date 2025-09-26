@@ -4,58 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Menu - Mphoza' Corner Kotas</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body style="background-color: blueviolet; color: white; font-family: Arial, sans-serif; padding: 20px; text-align: center;">
+<body>
+    <!-- Hamburger Menu Button -->
+    <div class="hamburger-menu">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
-    <!-- Navigation Menu -->
-    <nav style="background-color: white; padding: 10px; text-align: center; border-radius: 5px; margin-bottom: 20px;">
-        <a href="../index.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Home</a>
-        <a href="./about.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">About Us</a>
-        <a href="products.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Our Menu</a>
-        <a href="./enquiry.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Enquiry</a>
-        <a href="./contact.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Contact</a>
-    </nav>
-
-    <h1>Our Menu</h1>
-    <p>Choose from our delicious selection of Kotas</p>
-
-    <div style="margin-top: 20px;">
-        <h2>Full House Kota</h2>
-        <p>Polony, Russian, chips, cheese, egg, and atchar – R35</p>
-        <img src="../assets/unnamed.jpg" alt="Kota" width="200" height="200">
-
-        <h2>Chicken Special</h2>
-        <p>Grilled chicken, lettuce, cheese, and atchar – R30</p>
-        <img src="../assets/download.jpeg" alt="Kota" width="200" height="200">
-
-        <h2>Cheese & Chips Kota</h2>
-        <p>Freshly fried chips topped with melted cheese and atchar – R25</p> 
-        <img src="../assets/6dd9667ad09d484daf7bd9d003d4acd9.jpg" alt="Kota" width="200" height="200">
-
-        <h2>Veggie Delight</h2>
-        <p>Chips, lettuce, tomato, cheese, and a dash of atchar – R22</p>
-        <img src="../assets/Kota.jpg" alt="Kota" width="200" height="200">
+        <!-- Navigation Menu -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="products.html">Our Menu</a></li>
+                <li><a href="./enquiry.html">Enquiry</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-        
-    <!-- Tutorial Video Links -->
-    <div style="margin-top: 40px;">
-        <h2>Watch Our Tutorials</h2>
-        <p>Learn how we make our delicious Kotas:</p>
-        <a href="https://www.tiktok.com/@ceboskitchenstudio/video/7060499236164488450" target="_blank" style="display: inline-block; background-color: white; color: blueviolet; padding: 10px 20px; margin: 5px; text-decoration: none; font-weight: bold; border-radius: 5px;">Watch Tutorial 1</a>
-        <a href="https://www.tiktok.com/@quvie8/video/7338012427449027846?lang=en" target="_blank" style="display: inline-block; background-color: white; color: blueviolet; padding: 10px 20px; margin: 5px; text-decoration: none; font-weight: bold; border-radius: 5px;">Watch Tutorial 2</a>
-    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="hero-section">
+            <h1>Our Menu</h1>
+            <p>Choose from our delicious selection of Kotas</p>
+        </header>
+
+        <section class="menu-section">
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>Full House Kota</h3>
+                    <p>Polony, Russian, chips, cheese, egg, and atchar</p>
+                    <p class="price">R35</p>
+                    <img src="../assets/unnamed.jpg" alt="Full House Kota">
+                </div>
+
+                <div class="menu-item">
+                    <h3>Chicken Special</h3>
+                    <p>Grilled chicken, lettuce, cheese, and atchar</p>
+                    <p class="price">R30</p>
+                    <img src="../assets/download.jpeg" alt="Chicken Special Kota">
+                </div>
+
+                <div class="menu-item">
+                    <h3>Cheese & Chips Kota</h3>
+                    <p>Freshly fried chips topped with melted cheese and atchar</p>
+                    <p class="price">R25</p>
+                    <img src="../assets/6dd9667ad09d484daf7bd9d003d4acd9.jpg" alt="Cheese & Chips Kota">
+                </div>
+
+                <div class="menu-item">
+                    <h3>Veggie Delight</h3>
+                    <p>Chips, lettuce, tomato, cheese, and a dash of atchar</p>
+                    <p class="price">R22</p>
+                    <img src="../assets/Kota.jpg" alt="Veggie Delight Kota">
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorial Video Links -->
+        <section class="tutorials-section">
+            <h2>Watch Our Tutorials</h2>
+            <p>Learn how we make our delicious Kotas:</p>
+            <div class="tutorial-links">
+                <a href="https://www.tiktok.com/@ceboskitchenstudio/video/7060499236164488450" target="_blank" class="tutorial-btn">Watch Tutorial 1</a>
+                <a href="https://www.tiktok.com/@quvie8/video/7338012427449027846?lang=en" target="_blank" class="tutorial-btn">Watch Tutorial 2</a>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-<footer style="background-color: white; color: blueviolet; padding: 15px 0; margin-top: 40px; border-radius: 5px;">
-    <p style="margin: 5px 0;">&copy; 2025 Mphoza' Corner Kotas</p>
-    <p style="margin: 5px 0;">Follow us on:
-        <a href="https://www.facebook.com/" target="_blank" style="color: blueviolet; margin: 0 5px; text-decoration: none;">Facebook</a> |
-        <a href="https://www.instagram.com/" target="_blank" style="color: blueviolet; margin: 0 5px; text-decoration: none;">Instagram</a> |
-        <a href="https://www.tiktok.com/" target="_blank" style="color: blueviolet; margin: 0 5px; text-decoration: none;">TikTok</a>
-    </p>
-</footer>
-
-
+    <footer class="main-footer">
+        <p>&copy; 2025 Mphoza' Corner Kotas</p>
+        <p>Follow us on:
+            <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
+            <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+        </p>
+    </footer>
 </body>
 </html>
