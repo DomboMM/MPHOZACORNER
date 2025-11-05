@@ -4,30 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mphoza' Corner Kotas</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body style="background-color: blueviolet; color: white; text-align: center; font-family: Arial, sans-serif; padding: 20px;">
-    
-    <!-- Navigation Menu -->
-    <nav style="background-color: white; padding: 10px; text-align: center; border-radius: 5px; margin-bottom: 20px;">
-        <a href="index.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Home</a>
-        <a href="./page/about.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">About Us</a>
-        <a href="./page/products.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Our Menu</a>
-        <a href="./page/enquiry.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Enquiry</a>
-        <a href="./page/contact.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Contact</a>
-    </nav>
+<body>
+    <!-- Hamburger Menu Button -->
+    <div class="hamburger-menu">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
-    <h1>Welcome to Mphoza Corner Kotas</h1>
-    <h2>Delicious Kotas Just for You!</h2>
-    <img src="./assets/OIP.jpg" alt="Kotas" width="400" height="300">
+        <!-- Navigation Menu -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./page/about.html">About Us</a></li>
+                <li><a href="./page/products.html">Our Menu</a></li>
+                <li><a href="./page/enquiry.html">Enquiry</a></li>
+                <li><a href="./page/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="hero-section">
+            <h1>Welcome to Mphoza Corner Kotas</h1>
+            <h2>Delicious Kotas Just for You!</h2>
+            <img src="./assets/OIP.jpg" alt="Kotas" class="hero-image">
+        </header>
+    </main>
+
     <!-- Footer -->
-<footer style="background-color: white; color: blueviolet; padding: 15px 0; margin-top: 40px; border-radius: 5px;">
-    <p style="margin: 5px 0;">&copy; 2025 Mphoza' Corner Kotas</p>
-    <p style="margin: 5px 0;">Follow us on:
-        <a href="https://www.facebook.com/" target="_blank" style="color: blueviolet; margin: 0 5px; text-decoration: none;">Facebook</a> |
-        <a href="https://www.instagram.com/" target="_blank" style="color: blueviolet; margin: 0 5px; text-decoration: none;">Instagram</a> |
-        <a href="https://www.tiktok.com/" target="_blank" style="color: blueviolet; margin: 0 5px; text-decoration: none;">TikTok</a>
-    </p>
-</footer>
-
+    <footer class="main-footer">
+        <p>&copy; 2025 Mphoza' Corner Kotas</p>
+        <p>Follow us on:
+            <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
+            <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+        </p>
+    </footer>
 </body>
 </html>
