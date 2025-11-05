@@ -1,91 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Menu - Mphoza' Corner Kotas</title>
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Menu - Mphoza' Corner Kotas</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
+  <style>
+    /* Accordion Styles */
+    .accordion {
+      background-color: #FF6F3C;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+    .accordion:hover {
+      background-color: #E63946;
+    }
+    .panel {
+      padding: 0 15px;
+      background-color: rgba(255, 255, 255, 0.9);
+      display: none;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-    <!-- Hamburger Menu Button -->
-    <div class="hamburger-menu">
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="hamburger-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+  <!-- Hamburger Menu -->
+  <div class="hamburger-menu">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle"/>
+    <label for="menu-toggle" class="hamburger-btn">
+      <span></span><span></span><span></span>
+    </label>
 
-        <!-- Navigation Menu -->
-        <nav class="main-nav">
-            <ul class="nav-list">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./about.html">About Us</a></li>
-                <li><a href="products.html">Our Menu</a></li>
-                <li><a href="./enquiry.html">Enquiry</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./products.html">Our Menu</a></li>
+        <li><a href="./enquiry.html">Enquiry</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <header class="hero-section">
-            <h1>Our Menu</h1>
-            <p>Choose from our delicious selection of Kotas</p>
-        </header>
+  <main class="main-content">
+    <header class="hero-section">
+      <h1>Our Delicious Menu</h1>
+      <p>Browse through our freshly made Kotas and enjoy the Mphoza experience!</p>
+    </header>
 
-        <section class="menu-section">
-            <div class="menu-items">
-                <div class="menu-item">
-                    <h3>Full House Kota</h3>
-                    <p>Polony, Russian, chips, cheese, egg, and atchar</p>
-                    <p class="price">R35</p>
-                    <img src="../assets/unnamed.jpg" alt="Full House Kota">
-                </div>
+    <!-- 🧩 Step 1 – Menu container + search bar -->
+    <section class="menu-section">
+      <h2>Our Kotas Menu</h2>
 
-                <div class="menu-item">
-                    <h3>Chicken Special</h3>
-                    <p>Grilled chicken, lettuce, cheese, and atchar</p>
-                    <p class="price">R30</p>
-                    <img src="../assets/download.jpeg" alt="Chicken Special Kota">
-                </div>
+      <!-- Search bar -->
+      <input
+        type="text"
+        id="searchBox"
+        placeholder="Search for a kota..."
+        style="margin:10px 0; padding:10px; width:100%; max-width:400px; border-radius:8px; border:1px solid #ccc;"
+      />
 
-                <div class="menu-item">
-                    <h3>Cheese & Chips Kota</h3>
-                    <p>Freshly fried chips topped with melted cheese and atchar</p>
-                    <p class="price">R25</p>
-                    <img src="../assets/6dd9667ad09d484daf7bd9d003d4acd9.jpg" alt="Cheese & Chips Kota">
-                </div>
+      <!-- Dynamic products will load here -->
+      <div id="menuContainer" class="menu-items"></div>
+    </section>
 
-                <div class="menu-item">
-                    <h3>Veggie Delight</h3>
-                    <p>Chips, lettuce, tomato, cheese, and a dash of atchar</p>
-                    <p class="price">R22</p>
-                    <img src="../assets/Kota.jpg" alt="Veggie Delight Kota">
-                </div>
-            </div>
-        </section>
+    <!-- Accordion FAQ Section -->
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
 
-        <!-- Tutorial Video Links -->
-        <section class="tutorials-section">
-            <h2>Watch Our Tutorials</h2>
-            <p>Learn how we make our delicious Kotas:</p>
-            <div class="tutorial-links">
-                <a href="https://www.tiktok.com/@ceboskitchenstudio/video/7060499236164488450" target="_blank" class="tutorial-btn">Watch Tutorial 1</a>
-                <a href="https://www.tiktok.com/@quvie8/video/7338012427449027846?lang=en" target="_blank" class="tutorial-btn">Watch Tutorial 2</a>
-            </div>
-        </section>
-    </main>
+      <button class="accordion">Do you offer delivery?</button>
+      <div class="panel"><p>Yes! We deliver anywhere in Polokwane for a small extra fee.</p></div>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-        <p>&copy; 2025 Mphoza' Corner Kotas</p>
-        <p>Follow us on:
-            <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
-            <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
-            <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
-        </p>
-    </footer>
+      <button class="accordion">What are your opening hours?</button>
+      <div class="panel"><p>We’re open Monday to Saturday from 9 AM – 8 PM.</p></div>
+
+      <button class="accordion">Do you take bulk orders?</button>
+      <div class="panel"><p>Yes, bulk orders are welcome! Contact us for special deals.</p></div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 Mphoza' Corner Kotas</p>
+  </footer>
+
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+  <!-- Accordion JS -->
+  <script>
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    }
+  </script>
+    <!-- ✅ Dynamic JavaScript for menu items -->
+  <script>
+    // Kota product data (you can replace with your actual image paths)
+    const products = [
+      { name: "Classic Kota", price: "R30", image: "../assets/Kota.jpg" },
+      { name: "Cheese Kota", price: "R35", image: "../assets/download.jpeg" },
+      { name: "Russian Kota", price: "R40", image: "../assets/unnamed.jpg" },
+      { name: "Chicken Kota", price: "R45", image: "../assets/OIP.jpg" },
+      { name: "Mphoza Special", price: "R50", image: "../assets/mphoza.jpg.jpeg" },
+    ];
+
+    const menuContainer = document.getElementById("menuContainer");
+    const searchBox = document.getElementById("searchBox");
+
+    // Function to display products
+    function displayProducts(filteredProducts) {
+      menuContainer.innerHTML = ""; // Clear the container
+
+      filteredProducts.forEach((item) => {
+        const kotaCard = document.createElement("div");
+        kotaCard.classList.add("kota-card");
+
+        kotaCard.innerHTML = `
+          <a href="${item.image}" data-lightbox="menu-gallery" data-title="${item.name} - ${item.price}">
+            <img src="${item.image}" alt="${item.name}" class="kota-image" />
+          </a>
+          <h3>${item.name}</h3>
+          <p>${item.price}</p>
+        `;
+
+        menuContainer.appendChild(kotaCard);
+      });
+    }
+
+    // Initial display
+    displayProducts(products);
+
+    // Search functionality
+    searchBox.addEventListener("input", (e) => {
+      const searchTerm = e.target.value.toLowerCase();
+      const filtered = products.filter((item) =>
+        item.name.toLowerCase().includes(searchTerm)
+      );
+      displayProducts(filtered);
+    });
+  </script>
+  <!-- ✅ Dynamic JavaScript for menu items -->
+  <!-- ✅ Dynamic JavaScript for menu items with animation -->
+<script>
+  // Kota product data
+  const products = [
+    { name: "Classic Kota", price: "R30", image: "../assets/Kota.jpg" },
+    { name: "Cheese Kota", price: "R35", image: "../assets/download.jpeg" },
+    { name: "Russian Kota", price: "R40", image: "../assets/unnamed.jpg" },
+    { name: "Chicken Kota", price: "R45", image: "../assets/OIP.jpg" },
+  ];
+
+  const menuContainer = document.getElementById("menuContainer");
+  const searchBox = document.getElementById("searchBox");
+
+  // Function to display products with fade-in animation
+  function displayProducts(filteredProducts) {
+    menuContainer.innerHTML = ""; // Clear the container
+
+    filteredProducts.forEach((item, index) => {
+      const kotaCard = document.createElement("div");
+      kotaCard.classList.add("kota-card", "fade-in");
+
+      kotaCard.innerHTML = `
+        <a href="${item.image}" data-lightbox="menu-gallery" data-title="${item.name} - ${item.price}">
+          <img src="${item.image}" alt="${item.name}" class="kota-image" />
+        </a>
+        <h3>${item.name}</h3>
+        <p>${item.price}</p>
+      `;
+
+      // Delay the animation slightly for a smooth staggered effect
+      kotaCard.style.animationDelay = `${index * 0.1}s`;
+
+      menuContainer.appendChild(kotaCard);
+    });
+  }
+
+  // Initial display
+  displayProducts(products);
+
+  // Search functionality
+  searchBox.addEventListener("input", (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    const filtered = products.filter((item) =>
+      item.name.toLowerCase().includes(searchTerm)
+    );
+    displayProducts(filtered);
+  });
+</script>
 </body>
 </html>
+
+
+
+
