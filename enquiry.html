@@ -1,66 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry - Mphoza' Corner Kotas</title>
-    <link rel="stylesheet" href="../css/style.css">
+<meta charset="UTF-8" />
+<meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Enquiry | Mphoza Corner Kotas</title>
+<meta name="description" content="Have a question or special order? Fill out the enquiry form at Mphoza Corner Kotas to get in touch with us.">
+<meta name="keywords" content="Mphoza Corner enquiry, contact form, special orders, Kotas questions">
+<link rel="icon" href="../assets/mphoza.jpg.jpeg" type="image/jpeg">
+
+<style>
+body {font-family: Arial,sans-serif;margin:0;padding:0;line-height:1.6;background:#f9f9f9;color:#333;}
+.main-nav {background:#e63946;text-align:center;padding:15px 0;}
+.nav-list {list-style:none;margin:0;padding:0;display:flex;justify-content:center;gap:30px;}
+.nav-list li a {text-decoration:none;color:#fff;font-weight:bold;font-size:1.1rem;transition:color 0.3s;}
+.nav-list li a:hover, .nav-list li a[aria-current="page"] {color:#ffd166;}
+.main-content {max-width:800px;margin:0 auto;padding:20px;}
+.hero-section {text-align:center;background:#e63946;color:#fff;padding:40px 20px;border-radius:10px;margin-bottom:30px;}
+.hero-section h1 {font-size:2.5rem;margin-bottom:10px;}
+.enquiry-section {background:#fff;padding:20px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+.enquiry-section label {display:block;margin-bottom:5px;font-weight:bold;}
+.enquiry-section input, .enquiry-section textarea {width:100%;padding:10px;margin-bottom:15px;border-radius:5px;border:1px solid #ccc;font-size:1rem;}
+.enquiry-section button {background:#e63946;color:#fff;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;font-size:1rem;transition:background 0.3s;}
+.enquiry-section button:hover {background:#d62828;}
+.main-footer {text-align:center;padding:20px;background:#333;color:#fff;}
+.main-footer a {color:#f1faee;margin:0 5px;text-decoration:none;}
+.main-footer a:hover {color:#ffd166;}
+</style>
 </head>
+
 <body>
-    <!-- Hamburger Menu Button -->
-    <div class="hamburger-menu">
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="hamburger-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
 
-        <!-- Navigation Menu -->
-        <nav class="main-nav">
-            <ul class="nav-list">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./about.html">About Us</a></li>
-                <li><a href="./products.html">Our Menu</a></li>
-                <li><a href="./enquiry.html">Enquiry</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+<!-- Main Navigation -->
+<nav class="main-nav">
+  <ul class="nav-list">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="./about.html">About Us</a></li>
+    <li><a href="./products.html">Our Menu</a></li>
+    <li><a href="./enquiry.html" aria-current="page">Enquiry</a></li>
+    <li><a href="./contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <header class="hero-section">
-            <h1>Enquiry Form</h1>
-            <p>Have a question or want to place a special order? Fill out the form below!</p>
-        </header>
+<main class="main-content">
+  <header class="hero-section">
+    <h1>Enquiry Form</h1>
+    <p>Have a question or want to place a special order? Fill out the form below!</p>
+  </header>
 
-        <section class="enquiry-section">
-            <div class="enquiry-form">
-                <form>
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name" required>
+  <section class="enquiry-section">
+    <form id="enquiryForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your email address" required>
 
-                    <label for="message">Message / Enquiry:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="message">Message / Enquiry:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
 
-                    <button type="submit">Send Enquiry</button>
-                </form>
-            </div>
-        </section>
-    </main>
+      <button type="submit">Send Enquiry</button>
+      <p id="formMessage" style="color:green;text-align:center;margin-top:10px;"></p>
+    </form>
+  </section>
+</main>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-        <p>&copy; 2025 Mphoza' Corner Kotas</p>
-        <p>Follow us on:
-            <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
-            <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
-            <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
-        </p>
-    </footer>
+<footer class="main-footer">
+<p>&copy; 2025 Mphoza' Corner Kotas</p>
+<p>
+Follow us on:
+<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a> |
+<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a> |
+<a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
+</p>
+</footer>
+
+<script>
+const form = document.getElementById("enquiryForm");
+const formMessage = document.getElementById("formMessage");
+
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if(name && email && message){
+    formMessage.style.color = "green";
+    formMessage.textContent = "Thank you! Your enquiry has been sent.";
+    form.reset();
+  } else {
+    formMessage.style.color = "red";
+    formMessage.textContent = "Please fill in all fields before submitting.";
+  }
+});
+</script>
+
 </body>
 </html>
+
