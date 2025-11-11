@@ -65,6 +65,19 @@
 
     .hero-section h1 { margin-bottom: 10px; font-size: 2.5rem; }
 
+    /* 🔍 Search Bar */
+    .search-bar {
+      text-align: center;
+      margin: 30px auto;
+    }
+    .search-bar input {
+      width: 260px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
     /* Menu Section */
     .menu-section {
       max-width: 1200px;
@@ -145,6 +158,11 @@
       <h1>Our Menu</h1>
       <p>Choose from our delicious selection of Kotas</p>
     </header>
+
+    <!-- 🔍 Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="searchBox" placeholder="Search Kotas..." />
+    </div>
 
     <!-- Menu Gallery -->
     <section class="menu-section">
@@ -230,9 +248,22 @@
         }
       });
     }
+
+    // 🔍 Search Feature
+    const searchBox = document.getElementById("searchBox");
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    searchBox.addEventListener("input", () => {
+      const searchValue = searchBox.value.toLowerCase();
+      menuItems.forEach(item => {
+        const name = item.querySelector("h3").textContent.toLowerCase();
+        item.style.display = name.includes(searchValue) ? "block" : "none";
+      });
+    });
   </script>
 </body>
 </html>
+
 
 
 
