@@ -42,4 +42,3 @@ accordionHeaders.forEach(header => {
     }
   });
 });
-
