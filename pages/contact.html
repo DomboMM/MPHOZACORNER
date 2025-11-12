@@ -1,112 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us - Mphoza' Corner Kotas</title>
-  <link rel="stylesheet" href="../css/style.css" />
-
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Mphoza Corner Kotas</title>
+  <meta name="description" content="Contact Mphoza Corner Kotas or find us on the map.">
+  <meta name="keywords" content="Contact Mphoza Kotas, Polokwane Kotas, Google Map">
   <style>
-    #map {
-      height: 400px;
-      width: 100%;
-      border-radius: 15px;
-      margin: 20px 0;
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; color: #333; }
+    .main-nav { background: #e63946; text-align: center; padding: 15px 0; }
+    .nav-list { list-style: none; display: flex; justify-content: center; gap: 30px; padding: 0; margin: 0; }
+    .nav-list li a { color: #fff; text-decoration: none; font-weight: bold; }
+    .nav-list li a:hover { color: #ffd166; }
+    .container { max-width: 800px; margin: 40px auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #e63946; }
+    form input, form textarea, button {
+      width: 100%; padding: 10px; margin: 10px 0;
+      border: 1px solid #ccc; border-radius: 5px;
     }
+    button { background: #e63946; color: #fff; font-weight: bold; border: none; transition: background 0.3s; }
+    button:hover { background: #c92c3b; }
+    .map { margin-top: 20px; border-radius: 10px; overflow: hidden; }
+    iframe { width: 100%; height: 350px; border: 0; }
+    .success, .error { text-align: center; padding: 10px; display: none; border-radius: 5px; }
+    .success { background: #1dd1a1; color: #fff; }
+    .error { background: #ff6b6b; color: #fff; }
+    .main-footer { text-align: center; padding: 20px; background:#333; color:#fff; }
+    .main-footer a { color:#f1faee; margin:0 5px; text-decoration:none; }
+    .main-footer a:hover { color:#ffd166; }
   </style>
 </head>
 <body>
-  <!-- Hamburger Menu -->
-  <div class="hamburger-menu">
-    <input type="checkbox" id="menu-toggle" class="menu-toggle"/>
-    <label for="menu-toggle" class="hamburger-btn">
-      <span></span><span></span><span></span>
-    </label>
 
-    <nav class="main-nav">
-      <ul class="nav-list">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="./about.html">About Us</a></li>
-        <li><a href="./products.html">Our Menu</a></li>
-        <li><a href="./enquiry.html">Enquiry</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-    </nav>
+<nav class="main-nav">
+  <ul class="nav-list">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/products.html">Menu</a></li>
+    <li><a href="/enquiry.html">Enquiry</a></li>
+    <li><a href="/contact.html" aria-current="page">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <h1>Contact Us</h1>
+
+  <form id="contactForm">
+    <input type="text" id="contactName" placeholder="Your Name" required>
+    <input type="email" id="contactEmail" placeholder="Your Email" required>
+    <textarea id="contactMsg" rows="5" placeholder="Your message..." required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p class="success" id="contactSuccess">✅ Your message has been sent successfully!</p>
+  <p class="error" id="contactError">❌ Please fill in all fields correctly.</p>
+
+  <div class="map">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.0071682349683!2d29.4648!3d-23.9044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eb3c5e12af8f0c5%3A0x2f3e5e90c63eb3db!2sPolokwane%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1710000000000!5m2!1sen!2sza"
+      allowfullscreen="" loading="lazy"></iframe>
   </div>
+</div>
 
-  <main class="main-content">
-    <header class="hero-section">
-      <h1>Contact Us</h1>
-      <p>We would love to hear from you!</p>
-    </header>
+<footer class="main-footer">
+<p>&copy; 2025 Mphoza' Corner Kotas</p>
+<p>
+Follow us on:
+<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a> |
+<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a> |
+<a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
+</p>
+</footer>
 
-    <section class="contact-section">
-      <div class="locations">
-        <h2>Our Locations</h2>
-        <p>Location 1: 29 Devenish Street, Polokwane</p>
-        <p>Location 2: 51 Avenue Composite, Polokwane</p>
-      </div>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('contactName').value.trim();
+    const email = document.getElementById('contactEmail').value.trim();
+    const msg = document.getElementById('contactMsg').value.trim();
+    const success = document.getElementById('contactSuccess');
+    const error = document.getElementById('contactError');
 
-      <!-- Map -->
-      <div id="map"></div>
+    if (name && email.includes('@') && msg) {
+      success.style.display = 'block';
+      error.style.display = 'none';
+      this.reset();
+    } else {
+      error.style.display = 'block';
+      success.style.display = 'none';
+    }
+  });
+</script>
 
-      <div class="contact-form">
-        <h2>Contact Form</h2>
-        <form id="contactForm">
-          <label for="name">Full Name:</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-
-          <button type="submit">Send Message</button>
-        </form>
-        <p id="formMessage" style="color:green; text-align:center; margin-top:10px;"></p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="main-footer">
-    <p>&copy; 2025 Mphoza' Corner Kotas</p>
-    <p>
-      Follow us on:
-      <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
-      <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
-      <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
-    </p>
-  </footer>
-
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script>
-    // Wait for page to load before creating the map
-    window.addEventListener("load", function() {
-      const map = L.map('map').setView([-23.904, 29.454], 16); // Polokwane
-
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-      }).addTo(map);
-
-      L.marker([-23.904, 29.454])
-        .addTo(map)
-        .bindPopup('📍 Mphoza Corner Kotas - 29 Devenish Street, Polokwane')
-        .openPopup();
-    });
-
-    // Form Submission
-    const form = document.getElementById("contactForm");
-    const formMessage = document.getElementById("formMessage");
-
-    form.addEventListener("submit", function(e){
-      e.preventDefault();
-      formMessage.textContent = "✅ Thank you! Your message has been sent.";
-      form.reset();
-    });
-  </script>
 </body>
 </html>
