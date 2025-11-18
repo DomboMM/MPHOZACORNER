@@ -1,69 +1,67 @@
-# Mphoza' Corner Kotas - Website Documentation
+# Mphoza Corner Kotas
 
-# Mphoza' Corner Kotas
+Welcome to Mphoza Corner Kotas, your go-to spot for delicious Kotas in Polokwane! We serve fresh, flavorful township sandwiches made with love and the finest ingredients.
 
-A fully functional, SEO-optimized, and interactive website for **Mphoza' Corner Kotas**, a township food business in Polokwane, South Africa.
+## About Us
 
----
+Mphoza Corner Kotas is a family-owned business dedicated to bringing authentic South African fast food to the community. Founded by Mphoza, we're passionate about creating mouth-watering Kotas that satisfy your cravings.
 
-## 🌍 Website Overview
-Mphoza' Corner Kotas offers visitors a modern, mobile-friendly experience to explore our menu, contact us, and send enquiries directly. The website is built with **HTML5**, **CSS3**, and **JavaScript** (no frameworks).
+## Our Menu
 
----
+Explore our variety of Kotas, including:
+- Full House Kota (Polony, Russian, chips, cheese, egg, and atchar) - R35
+- Chicken Special (Grilled chicken, lettuce, cheese, and atchar) - R30
+- Cheese & Chips Kota (Freshly fried chips topped with melted cheese and atchar) - R25
+- Veggie Delight (Chips, lettuce, tomato, cheese, and a dash of atchar) - R22
 
-## 🧱 Structure
+## How to Use This Website
 
-| Page | Description |
-|------|--------------|
-| `index.html` | Homepage with hero banner, Lightbox image, and daily dynamic content |
-| `about.html` | Story and founder section with Lightbox image |
-| `products.html` | Menu page with gallery lightbox, accordion FAQs, and search feature |
-| `enquiry.html` | JavaScript-validated enquiry form with feedback messages |
-| `contact.html` | Interactive Leaflet map and contact form with validation |
+1. **Navigation**: Use the menu bar at the top to navigate between pages (Home, About Us, Our Menu, Enquiry, Contact).
+2. **Menu Exploration**: On the Our Menu page, you can:
+   - Browse our Kota gallery with lightbox image viewing
+   - Use the search bar to find specific Kotas
+   - Explore menu categories using the interactive tabs
+   - View special offers in the modal popup
+   - Check out FAQs in the accordion section
+3. **Contact Us**: Use the Enquiry or Contact forms to get in touch. These forms use EmailJS for secure email processing.
+4. **Social Media**: Follow us on Facebook, Instagram, and TikTok for updates and specials.
 
----
+## Browser Support
 
-## ⚙️ Features Implemented
+This website is designed to work on modern browsers including:
+- Chrome (recommended)
+- Firefox
+- Safari
+- Edge
 
-- ✅ Interactive Elements: Accordion FAQ, Lightbox gallery  
-- ✅ Interactive Map: Leaflet map with marker and popup  
-- ✅ Dynamic Content: Daily specials displayed randomly  
-- ✅ Search Feature: Real-time menu filtering  
-- ✅ SEO Optimization: Meta titles, keywords, descriptions, and Open Graph tags  
-- ✅ Accessibility: Proper alt text, ARIA labels, and form validation  
-- ✅ Forms: JS validation with instant user feedback  
-- ✅ Proper Image Naming and alt text  
+For the best experience, please ensure your browser is up to date.
 
----
+## Features
 
-## 🧩 Technologies Used
+- Responsive design for mobile and desktop
+- Interactive menu with search functionality
+- Lightbox image gallery for menu items
+- EmailJS integration for contact forms
+- Interactive tabs and modals on the menu page
+- FAQ accordion for quick information
 
-- **HTML5 / CSS3 / JavaScript (ES6)**
-- **Lightbox2** for image gallery
-- **Leaflet.js** for interactive map
-- **OpenStreetMap** tiles
-- **Responsive Design** with flexbox/grid
+## Changelog
 
----
+### Version 1.0.0 (Initial Release)
+- Basic website structure with HTML, CSS, and JavaScript
+- Menu gallery with lightbox functionality
+- Contact and enquiry forms
+- Responsive navigation
 
-## 🌐 Browser Support
-Tested and works on:
-- Google Chrome  
-- Mozilla Firefox  
-- Microsoft Edge  
-- Safari (mobile & desktop)
+### Version 1.1.0
+- Added EmailJS integration for form submissions
+- Implemented interactive tabs for menu categories
+- Added modal popup for special offers
+- Updated image naming for better organization
+- Improved search functionality on menu page
 
----
+## Contact
 
-## 🧭 How to Use
-1. Open `index.html` in any browser.
-2. Navigate using the menu bar.
-3. Test interactive elements (accordion, forms, gallery, map).
-4. Edit content or add new products easily by updating the HTML.
+For enquiries or feedback, please use our contact form or reach out via social media.
 
----
-
-## 🗂 References
-- [Lightbox2 Documentation](https://lokeshdhakar.com/projects/lightbox2/)
-- [Leaflet JS Documentation](https://leafletjs.com/)
-- [MDN Web Docs](https://developer.mozilla.org/)
+© 2025 Mphoza Corner Kotas. All rights reserved.

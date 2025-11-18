@@ -11,7 +11,7 @@
   <!-- External CSS -->
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
-  <link rel="icon" href="/assets/mphoza.jpg.jpeg" type="image/jpeg" />
+  <link rel="icon" href="/assets/founder-mphoza.jpg" type="image/jpeg" />
 
   <!-- Internal CSS -->
   <style>
@@ -134,6 +134,33 @@
 
     .panel { padding: 0 15px 15px; display: none; background-color: #fff; border-radius: 0 0 5px 5px; margin-bottom: 10px; color: #333; }
 
+    /* Tabs Styles */
+    .tabs-section { max-width: 800px; margin: 0 auto 50px; padding: 0 20px; }
+    .tabs-section h2 { text-align: center; color: #e63946; margin-bottom: 20px; }
+
+    .tab-container { border: 1px solid #ddd; border-radius: 10px; overflow: hidden; }
+    .tab-buttons { display: flex; background-color: #f5f5f5; }
+    .tab-btn { flex: 1; padding: 15px; border: none; background: none; cursor: pointer; font-weight: bold; transition: background-color 0.3s; }
+    .tab-btn.active { background-color: #e63946; color: #fff; }
+    .tab-btn:hover { background-color: #ffd166; }
+
+    .tab-content { padding: 20px; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .tab-panel h3 { color: #e63946; margin-bottom: 10px; }
+    .tab-panel ul { list-style-type: disc; padding-left: 20px; }
+
+    /* Modal Styles */
+    .modal-section { max-width: 800px; margin: 0 auto 50px; padding: 0 20px; text-align: center; }
+    .modal-section h2 { color: #e63946; margin-bottom: 20px; }
+    .modal-btn { background: #e63946; color: #fff; padding: 12px 24px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+    .modal-btn:hover { background: #c92c3b; }
+
+    .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); }
+    .modal-content { background-color: #fff; margin: 15% auto; padding: 20px; border-radius: 10px; width: 80%; max-width: 500px; position: relative; }
+    .close-modal { position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; cursor: pointer; color: #333; }
+    .close-modal:hover { color: #e63946; }
+
     /* Footer */
     .main-footer { text-align: center; padding: 20px; background-color: #333; color: #fff; }
     .main-footer a { color: #f1faee; margin: 0 5px; text-decoration: none; }
@@ -146,10 +173,10 @@
   <nav class="main-nav">
     <ul class="nav-list">
       <li><a href="/index.html">Home</a></li>
-      <li><a href="/about.html">About Us</a></li>
-      <li><a href="/products.html" aria-current="page">Our Menu</a></li>
-      <li><a href="/enquiry.html">Enquiry</a></li>
-      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/pages/about.html">About Us</a></li>
+      <li><a href="/pages/products.html" aria-current="page">Our Menu</a></li>
+      <li><a href="/pages/enquiry.html">Enquiry</a></li>
+      <li><a href="/pages/contact.html">Contact</a></li>
     </ul>
   </nav>
 
@@ -170,8 +197,8 @@
         <h3>Full House Kota</h3>
         <p>Polony, Russian, chips, cheese, egg, and atchar</p>
         <p class="price">R35</p>
-        <a href="/assets/unnamed.jpg" data-lightbox="kotas" data-title="Full House Kota - R35">
-          <img src="/assets/unnamed.jpg" alt="Full House Kota">
+        <a href="/assets/full-house-kota.jpg" data-lightbox="kotas" data-title="Full House Kota - R35">
+          <img src="/assets/full-house-kota.jpg" alt="Full House Kota">
         </a>
       </div>
 
@@ -179,8 +206,8 @@
         <h3>Chicken Special</h3>
         <p>Grilled chicken, lettuce, cheese, and atchar</p>
         <p class="price">R30</p>
-        <a href="/assets/download.jpeg" data-lightbox="kotas" data-title="Chicken Special - R30">
-          <img src="/assets/download.jpeg" alt="Chicken Special Kota">
+        <a href="/assets/chicken-special-kota.jpg" data-lightbox="kotas" data-title="Chicken Special - R30">
+          <img src="/assets/chicken-special-kota.jpg" alt="Chicken Special Kota">
         </a>
       </div>
 
@@ -188,8 +215,39 @@
         <h3>Cheese & Chips Kota</h3>
         <p>Freshly fried chips topped with melted cheese and atchar</p>
         <p class="price">R25</p>
-        <a href="/assets/6dd9667ad09d484daf7bd9d003d4acd9.jpg" data-lightbox="kotas" data-title="Cheese & Chips Kota - R25">
-          <img src="/assets/6dd9667ad09d484daf7bd9d003d4acd9.jpg" alt="Cheese & Chips Kota">
+        <a href="/assets/cheese-chips-kota.jpg" data-lightbox="kotas" data-title="Cheese & Chips Kota - R25">
+          <img src="/assets/cheese-kota.jpg
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          " alt="Cheese & Chips Kota">
         </a>
       </div>
 
@@ -197,9 +255,65 @@
         <h3>Veggie Delight</h3>
         <p>Chips, lettuce, tomato, cheese, and a dash of atchar</p>
         <p class="price">R22</p>
-        <a href="/assets/Kota.jpg" data-lightbox="kotas" data-title="Veggie Delight Kota - R22">
-          <img src="/assets/Kota.jpg" alt="Veggie Delight Kota">
+        <a href="/assets/veggie-delight-kota.jpg" data-lightbox="kotas" data-title="Veggie Delight Kota - R22">
+          <img src="/assets/veggie-delight-kota.jpg" alt="Veggie Delight Kota">
         </a>
+      </div>
+    </section>
+
+    <!-- Tabs Section -->
+    <section class="tabs-section">
+      <h2>Menu Categories</h2>
+      <div class="tab-container">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="popular">Popular</button>
+          <button class="tab-btn" data-tab="chicken">Chicken</button>
+          <button class="tab-btn" data-tab="veggie">Vegetarian</button>
+        </div>
+        <div class="tab-content">
+          <div class="tab-panel active" id="popular">
+            <h3>Most Popular Kotas</h3>
+            <p>Our best-selling items that customers love!</p>
+            <ul>
+              <li>Full House Kota - R35</li>
+              <li>Chicken Special - R30</li>
+              <li>Cheese & Chips Kota - R25</li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="chicken">
+            <h3>Chicken Options</h3>
+            <p>Delicious chicken-based Kotas with fresh ingredients.</p>
+            <ul>
+              <li>Chicken Special - R30</li>
+              <li>Grilled Chicken Kota - R32</li>
+              <li>Chicken & Cheese - R28</li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="veggie">
+            <h3>Vegetarian Choices</h3>
+            <p>Perfect for vegetarians, packed with flavor.</p>
+            <ul>
+              <li>Veggie Delight - R22</li>
+              <li>Cheese & Chips - R25</li>
+              <li>Tomato & Cheese - R20</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Section -->
+    <section class="modal-section">
+      <h2>Special Offers</h2>
+      <button id="openModal" class="modal-btn">View Today's Special</button>
+      <div id="specialModal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h3>🔥 Today's Special!</h3>
+          <p>Get our Big Boss Kota with extra meat and chips for only R40!</p>
+          <p><strong>Limited time offer - Available today only!</strong></p>
+          <img src="/assets/big-boss-kota.jpg" alt="Big Boss Kota Special" style="width: 100%; border-radius: 10px; margin-top: 15px;">
+        </div>
       </div>
     </section>
 
@@ -259,6 +373,42 @@
         const name = item.querySelector("h3").textContent.toLowerCase();
         item.style.display = name.includes(searchValue) ? "block" : "none";
       });
+    });
+
+    // Tabs functionality
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons and panels
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabPanels.forEach(panel => panel.classList.remove('active'));
+
+        // Add active class to clicked button and corresponding panel
+        button.classList.add('active');
+        const tabId = button.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+
+    // Modal functionality
+    const modal = document.getElementById('specialModal');
+    const openModalBtn = document.getElementById('openModal');
+    const closeModalBtn = document.querySelector('.close-modal');
+
+    openModalBtn.addEventListener('click', () => {
+      modal.style.display = 'block';
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
     });
   </script>
 </body>
