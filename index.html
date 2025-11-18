@@ -14,12 +14,12 @@
   <!-- Social Media / Open Graph -->
   <meta property="og:title" content="Mphoza' Corner Kotas | Best Kotas in Polokwane">
   <meta property="og:description" content="Delicious township kotas made fresh daily in Polokwane. Visit us today!">
-  <meta property="og:image" content="assets/founder-mphoza.jpg">
+  <meta property="og:image" content="assets/mphoza.jpg.jpeg">
   <meta property="og:url" content="https://dombomm.github.io/MPHOZACORNER/">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Favicon -->
-  <link rel="icon" href="assets/founder-mphoza.jpg" type="image/jpeg">
+  <link rel="icon" href="assets/mphoza.jpg.jpeg" type="image/jpeg">
 
   <!-- Lightbox CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
@@ -54,6 +54,78 @@
       font-size: 1.2rem;
       font-weight: bold;
     }
+
+    /* Modal styling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 500px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    .close-modal {
+      background: #e63946;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .close-modal:hover {
+      background: #c92c3b;
+    }
   </style>
 </head>
 <body>
@@ -72,16 +144,38 @@
 <h1>Welcome to Mphoza Corner Kotas!</h1>
 <p>Serving the tastiest Kotas in Polokwane. Fresh, delicious, and affordable.</p>
 
-<a href="assets/full-house-kota.jpg" data-lightbox="hero" data-title="Mphoza Corner Kotas">
-  <img src="assets/full-house-kota.jpg" alt="Mphoza Corner Kotas">
+<a href="assets/unnamed.jpg" data-lightbox="hero" data-title="Mphoza Corner Kotas">
+  <img src="assets/unnamed.jpg" alt="Mphoza Corner Kotas">
 </a>
+
+<button id="specialOfferBtn" style="background: #ffd166; color: #333; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; margin-top: 20px; cursor: pointer;">View Special Offer</button>
 </section>
 
 <!-- 🔥 Dynamic Real-Time Content Section -->
 <section class="dynamic-section">
   <h2 id="dailyMessage"></h2>
   <p id="currentTime"></p>
+  <button id="specialOfferBtn" style="background: #e63946; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px;">Special Offer!</button>
 </section>
+
+<!-- Special Offer Modal -->
+<div id="specialModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>🎉 Special Offer!</h2>
+    <p>Get 20% off on your first Kota order! Use code: WELCOME20</p>
+    <p>Valid until end of month.</p>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="specialModal" class="modal">
+  <div class="modal-content">
+    <h2>🔥 Special Offer!</h2>
+    <p>Get 20% off on your first order! Use code: WELCOME20</p>
+    <button class="close-modal">Close</button>
+  </div>
+</div>
 
 <footer class="main-footer">
 <p>&copy; 2025 Mphoza' Corner Kotas</p>
@@ -117,6 +211,27 @@ Follow us on:
   }
   updateTime();
   setInterval(updateTime, 1000);
+
+  // Modal functionality
+  const modal = document.getElementById("specialModal");
+  const btn = document.getElementById("specialOfferBtn");
+  const span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
 </script>
 
 </body>

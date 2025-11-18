@@ -1,14 +1,27 @@
-# TODO: Complete Remaining Website Features
+# TODO List for Implementing Website Features
 
-- [x] Step 1: Rename images in assets/ folder to descriptive names (e.g., full-house-kota.jpg, chicken-special-kota.jpg, founder-mphoza.jpg, etc.)
-- [x] Step 2: Update image references in index.html to use new image names
-- [x] Step 3: Update image references in pages/about.html to use new image names
-- [x] Step 4: Update image references in pages/products.html to use new image names
-- [x] Step 5: Update image references in pages/contact.html to use new image names (if any)
-- [x] Step 6: Integrate EmailJS into enquiry.html for email processing
-- [x] Step 7: Integrate EmailJS into contact.html for email processing
-- [x] Step 8: Add tabs interactive element to products.html
-- [x] Step 9: Add modals interactive element to products.html
-- [x] Step 10: Update README.md with how-to guide
-- [x] Step 11: Update README.md with browser support information
-- [x] Step 12: Add dedicated changelog section to README.md
+## 1. Add Tabs to Products Page
+- [x] Modify pages/products.html to include tabbed menu categories (e.g., All, Chicken, Veggie).
+- [x] Add CSS for tab styling.
+- [x] Add JS to handle tab switching and filter menu items.
+
+## 2. Add Modal to Index Page
+- [x] Modify index.html to include a "Special Offer" modal.
+- [x] Add CSS for modal styling.
+- [x] Add JS to trigger and close the modal.
+
+## 3. Update Contact Page Map to Leaflet
+- [x] Modify pages/contact.html to use Leaflet.js instead of Google iframe.
+- [x] Add Leaflet CSS and JS links.
+- [x] Implement interactive map with marker and popup for Polokwane location.
+
+## 4. Update ReadMe.md
+- [x] Add a Changelog section documenting development history.
+- [x] Update References list with all used libraries and docs.
+- [x] Ensure all features are documented.
+
+## 5. Testing and Verification
+- [x] Test all interactive elements (tabs, modal, accordion, search).
+- [x] Verify forms validation and feedback.
+- [x] Check map interactivity.
+- [x] Confirm SEO tags and accessibility.
