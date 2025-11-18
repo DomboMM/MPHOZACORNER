@@ -1,0 +1,308 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Menu | Mphoza Corner Kotas</title>
+  <meta name="description" content="Check out the delicious menu of Mphoza Corner Kotas. Browse our variety of Kotas with chicken, cheese, chips, and more!">
+  <meta name="keywords" content="Kotas menu, Polokwane food, Mphoza Corner, fast food, township sandwich">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+  <link rel="icon" href="/assets/mphoza.jpg.jpeg" type="image/jpeg" />
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Main Navigation */
+    .main-nav {
+      background-color: #e63946;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    .nav-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .nav-list li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    .nav-list li a:hover,
+    .nav-list li a[aria-current="page"] {
+      color: #ffd166;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #e63946;
+      color: #fff;
+      border-radius: 10px;
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+
+    .hero-section h1 { margin-bottom: 10px; font-size: 2.5rem; }
+
+    /* 🔍 Search Bar */
+    .search-bar {
+      text-align: center;
+      margin: 30px auto;
+    }
+    .search-bar input {
+      width: 260px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    /* Menu Section */
+    .menu-section {
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .menu-item {
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      color: #fff;
+    }
+
+    .menu-item:nth-child(1) { background-color: #ff6b6b; } /* red */
+    .menu-item:nth-child(2) { background-color: #feca57; color: #333; } /* yellow */
+    .menu-item:nth-child(3) { background-color: #54a0ff; } /* blue */
+    .menu-item:nth-child(4) { background-color: #1dd1a1; } /* green */
+
+    .menu-item:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+
+    .menu-item img { width: 100%; border-radius: 10px; margin-bottom: 10px; }
+
+    .menu-item h3 { margin: 10px 0 5px; }
+    .menu-item p.price { font-weight: bold; margin: 5px 0 10px; }
+
+    /* FAQ Accordion */
+    .faq-section { max-width: 800px; margin: 0 auto 50px; padding: 0 20px; }
+    .faq-section h2 { text-align: center; color: #e63946; margin-bottom: 20px; }
+
+    .accordion {
+      cursor: pointer;
+      padding: 15px;
+      width: 100%;
+      border: none;
+      outline: none;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      text-align: left;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      color: #fff;
+    }
+
+    .accordion:nth-child(1) { background-color: #ff6b6b; }
+    .accordion:nth-child(3) { background-color: #feca57; color: #333; }
+    .accordion:nth-child(5) { background-color: #54a0ff; }
+
+    .accordion.active { opacity: 0.9; }
+
+    .panel { padding: 0 15px 15px; display: none; background-color: #fff; border-radius: 0 0 5px 5px; margin-bottom: 10px; color: #333; }
+
+    /* Tabs */
+    .tabs { text-align: center; margin: 20px 0; }
+    .tab-button {
+      background: #e63946; color: #fff; border: none; padding: 10px 20px;
+      margin: 0 5px; cursor: pointer; border-radius: 5px; font-weight: bold;
+      transition: background 0.3s;
+    }
+    .tab-button.active, .tab-button:hover { background: #c92c3b; }
+
+    /* Footer */
+    .main-footer { text-align: center; padding: 20px; background-color: #333; color: #fff; }
+    .main-footer a { color: #f1faee; margin: 0 5px; text-decoration: none; }
+    .main-footer a:hover { color: #ffd166; }
+  </style>
+</head>
+<body>
+
+  <!-- Main Navigation -->
+  <nav class="main-nav">
+    <ul class="nav-list">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="products.html" aria-current="page">Our Menu</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <header class="hero-section">
+      <h1>Our Menu</h1>
+      <p>Choose from our delicious selection of Kotas</p>
+    </header>
+
+    <!-- 🔍 Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="searchBox" placeholder="Search Kotas..." />
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-button active" data-category="all">All</button>
+      <button class="tab-button" data-category="chicken">Chicken</button>
+      <button class="tab-button" data-category="veggie">Veggie</button>
+    </div>
+
+    <!-- Menu Gallery -->
+    <section class="menu-section">
+      <div class="menu-item" data-category="chicken">
+        <h3>Full House Kota</h3>
+        <p>Polony, Russian, chips, cheese, egg, and atchar</p>
+        <p class="price">R35</p>
+        <a href="/assets/unnamed.jpg" data-lightbox="kotas" data-title="Full House Kota - R35">
+          <img src="/assets/unnamed.jpg" alt="Full House Kota">
+        </a>
+      </div>
+
+      <div class="menu-item" data-category="chicken">
+        <h3>Chicken Special</h3>
+        <p>Grilled chicken, lettuce, cheese, and atchar</p>
+        <p class="price">R30</p>
+        <a href="/assets/download.jpeg" data-lightbox="kotas" data-title="Chicken Special - R30">
+          <img src="/assets/download.jpeg" alt="Chicken Special Kota">
+        </a>
+      </div>
+
+      <div class="menu-item" data-category="veggie">
+        <h3>Cheese & Chips Kota</h3>
+        <p>Freshly fried chips topped with melted cheese and atchar</p>
+        <p class="price">R25</p>
+        <a href="/assets/6dd9667ad09d484daf7bd9d003d4acd9.jpg" data-lightbox="kotas" data-title="Cheese & Chips Kota - R25">
+          <img src="/assets/6dd9667ad09d484daf7bd9d003d4acd9.jpg" alt="Cheese & Chips Kota">
+        </a>
+      </div>
+
+      <div class="menu-item" data-category="veggie">
+        <h3>Veggie Delight</h3>
+        <p>Chips, lettuce, tomato, cheese, and a dash of atchar</p>
+        <p class="price">R22</p>
+        <a href="/assets/Kota.jpg" data-lightbox="kotas" data-title="Veggie Delight Kota - R22">
+          <img src="/assets/Kota.jpg" alt="Veggie Delight Kota">
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <button class="accordion" aria-expanded="false">Do you deliver?</button>
+      <div class="panel"><p>Yes, we offer local delivery within Polokwane. Check our contact page for details.</p></div>
+
+      <button class="accordion" aria-expanded="false">Can I customize my Kota?</button>
+      <div class="panel"><p>Absolutely! You can choose your preferred ingredients.</p></div>
+
+      <button class="accordion" aria-expanded="false">Are your ingredients fresh?</button>
+      <div class="panel"><p>We use fresh ingredients daily to ensure quality and taste.</p></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <p>&copy; 2025 Mphoza' Corner Kotas</p>
+    <p>
+      Follow us on:
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a> |
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a> |
+      <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <script>
+    // Accordion functionality
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+          this.setAttribute("aria-expanded", "false");
+        } else {
+          panel.style.display = "block";
+          this.setAttribute("aria-expanded", "true");
+        }
+      });
+    }
+
+    // 🔍 Search Feature
+    const searchBox = document.getElementById("searchBox");
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    searchBox.addEventListener("input", () => {
+      const searchValue = searchBox.value.toLowerCase();
+      menuItems.forEach(item => {
+        const name = item.querySelector("h3").textContent.toLowerCase();
+        item.style.display = name.includes(searchValue) ? "block" : "none";
+      });
+    });
+
+    // Tabs functionality
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const allItems = document.querySelectorAll(".menu-item");
+
+    tabButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        // Remove active class from all buttons
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+        // Add active class to clicked button
+        button.classList.add("active");
+
+        const category = button.getAttribute("data-category");
+
+        allItems.forEach(item => {
+          if (category === "all" || item.getAttribute("data-category") === category) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+

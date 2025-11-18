@@ -32,3 +32,39 @@
   </url>
 
 </urlset>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://dombomm.github.io/MPHOZACORNER/index.html</loc>
+    <lastmod>2025-11-06</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://dombomm.github.io/MPHOZACORNER/about.html</loc>
+    <lastmod>2025-11-06</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://dombomm.github.io/MPHOZACORNER/products.html</loc>
+    <lastmod>2025-11-06</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://dombomm.github.io/MPHOZACORNER/enquiry.html</loc>
+    <lastmod>2025-11-06</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://dombomm.github.io/MPHOZACORNER/contact.html</loc>
+    <lastmod>2025-11-06</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+</urlset>
+
