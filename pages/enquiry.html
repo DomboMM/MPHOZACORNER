@@ -7,7 +7,10 @@
   <meta name="description" content="Send your enquiry to Mphoza Corner Kotas in Polokwane.">
   <meta name="keywords" content="Mphoza Kotas enquiry, contact Mphoza Kotas">
   <link rel="stylesheet" href="/css/style.css">
+
   <link rel="icon" href="/assets/founder-mphoza.jpg" type="image/jpeg" />
+
+
   <style>
     body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; color: #333; }
     .main-nav { background: #e63946; text-align: center; padding: 15px 0; }
@@ -37,11 +40,18 @@
 
 <nav class="main-nav">
   <ul class="nav-list">
+
     <li><a href="/index.html">Home</a></li>
     <li><a href="/pages/about.html">About Us</a></li>
     <li><a href="/pages/products.html">Our Menu</a></li>
     <li><a href="/pages/enquiry.html" aria-current="page">Enquiry</a></li>
-    <li><a href="/pages/contact.html">Contact</a></li>
+    <li><a href="/pages/contact.html">Contact</a></li
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="products.html">Our Menu</a></li>
+    <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+    <li><a href="contact.html">Contact</a></li>
+
   </ul>
 </nav>
 
@@ -69,11 +79,15 @@ Follow us on:
 </p>
 </footer>
 
+
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
   (function(){
     emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
   })();
+
+
+<script>
 
   document.getElementById('enquiryForm').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -84,6 +98,7 @@ Follow us on:
     const errorMsg = document.getElementById('errorMsg');
 
     if (name && email.includes('@') && message) {
+
       // Send email using EmailJS
       emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
         from_name: name,
@@ -102,6 +117,11 @@ Follow us on:
         errorMsg.style.display = 'block';
         successMsg.style.display = 'none';
       });
+
+      successMsg.style.display = 'block';
+      errorMsg.style.display = 'none';
+      this.reset();
+
     } else {
       errorMsg.style.display = 'block';
       successMsg.style.display = 'none';

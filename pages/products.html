@@ -1,4 +1,8 @@
+
 <!DOCTYPE html>
+
+ <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -11,7 +15,11 @@
   <!-- External CSS -->
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+
   <link rel="icon" href="/assets/founder-mphoza.jpg" type="image/jpeg" />
+
+  <link rel="icon" href="/assets/mphoza.jpg.jpeg" type="image/jpeg" />
+
 
   <!-- Internal CSS -->
   <style>
@@ -134,6 +142,7 @@
 
     .panel { padding: 0 15px 15px; display: none; background-color: #fff; border-radius: 0 0 5px 5px; margin-bottom: 10px; color: #333; }
 
+
     /* Tabs Styles */
     .tabs-section { max-width: 800px; margin: 0 auto 50px; padding: 0 20px; }
     .tabs-section h2 { text-align: center; color: #e63946; margin-bottom: 20px; }
@@ -161,6 +170,16 @@
     .close-modal { position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; cursor: pointer; color: #333; }
     .close-modal:hover { color: #e63946; }
 
+    /* Tabs */
+    .tabs { text-align: center; margin: 20px 0; }
+    .tab-button {
+      background: #e63946; color: #fff; border: none; padding: 10px 20px;
+      margin: 0 5px; cursor: pointer; border-radius: 5px; font-weight: bold;
+      transition: background 0.3s;
+    }
+    .tab-button.active, .tab-button:hover { background: #c92c3b; }
+
+
     /* Footer */
     .main-footer { text-align: center; padding: 20px; background-color: #333; color: #fff; }
     .main-footer a { color: #f1faee; margin: 0 5px; text-decoration: none; }
@@ -172,11 +191,13 @@
   <!-- Main Navigation -->
   <nav class="main-nav">
     <ul class="nav-list">
+
       <li><a href="/index.html">Home</a></li>
       <li><a href="/pages/about.html">About Us</a></li>
       <li><a href="/pages/products.html" aria-current="page">Our Menu</a></li>
       <li><a href="/pages/enquiry.html">Enquiry</a></li>
       <li><a href="/pages/contact.html">Contact</a></li>
+
     </ul>
   </nav>
 
@@ -190,6 +211,7 @@
     <div class="search-bar">
       <input type="text" id="searchBox" placeholder="Search Kotas..." />
     </div>
+
 
     <!-- Menu Gallery -->
     <section class="menu-section">
@@ -207,7 +229,7 @@
         <p>Grilled chicken, lettuce, cheese, and atchar</p>
         <p class="price">R30</p>
         <a href="/assets/chicken-special-kota.jpg" data-lightbox="kotas" data-title="Chicken Special - R30">
-          <img src="/assets/chicken-special-kota.jpg" alt="Chicken Special Kota">
+          <img src="../assets/chicken-special-kota.jpg" alt="Chicken Special Kota">
         </a>
       </div>
 
@@ -216,7 +238,7 @@
         <p>Freshly fried chips topped with melted cheese and atchar</p>
         <p class="price">R25</p>
         <a href="/assets/cheese-chips-kota.jpg" data-lightbox="kotas" data-title="Cheese & Chips Kota - R25">
-          <img src="/assets/cheese-kota.jpg
+          <img src="../assets/cheese-kota.jpg
           
           
           
@@ -256,10 +278,55 @@
         <p>Chips, lettuce, tomato, cheese, and a dash of atchar</p>
         <p class="price">R22</p>
         <a href="/assets/veggie-delight-kota.jpg" data-lightbox="kotas" data-title="Veggie Delight Kota - R22">
-          <img src="/assets/veggie-delight-kota.jpg" alt="Veggie Delight Kota">
+          <img src="../assets/veggie-delight-kota.jpg" alt="Veggie Delight Kota">
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-button active" data-category="all">All</button>
+      <button class="tab-button" data-category="chicken">Chicken</button>
+      <button class="tab-button" data-category="veggie">Veggie</button>
+    </div>
+
+    <!-- Menu Gallery -->
+    <section class="menu-section">
+      <div class="menu-item" data-category="chicken">
+        <h3>Full House Kota</h3>
+        <p>Polony, Russian, chips, cheese, egg, and atchar</p>
+        <p class="price">R35</p>
+        <a href="/assets/unnamed.jpg" data-lightbox="kotas" data-title="Full House Kota - R35">
+          <img src="../assets/unnamed.jpg" alt="Full House Kota">
+        </a>
+      </div>
+
+      <div class="menu-item" data-category="chicken">
+        <h3>Chicken Special</h3>
+        <p>Grilled chicken, lettuce, cheese, and atchar</p>
+        <p class="price">R30</p>
+        <a href="/assets/download.jpeg" data-lightbox="kotas" data-title="Chicken Special - R30">
+          <img src="../assets/download.jpeg" alt="Chicken Special Kota">
+        </a>
+      </div>
+
+      <div class="menu-item" data-category="veggie">
+        <h3>Cheese & Chips Kota</h3>
+        <p>Freshly fried chips topped with melted cheese and atchar</p>
+        <p class="price">R25</p>
+        <a href="/assets/6dd9667ad09d484daf7bd9d003d4acd9.jpg" data-lightbox="kotas" data-title="Cheese & Chips Kota - R25">
+          <img src="../assets/6dd9667ad09d484daf7bd9d003d4acd9.jpg" alt="Cheese & Chips Kota">
+        </a>
+      </div>
+
+      <div class="menu-item" data-category="veggie">
+        <h3>Veggie Delight</h3>
+        <p>Chips, lettuce, tomato, cheese, and a dash of atchar</p>
+        <p class="price">R22</p>
+        <a href="/assets/Kota.jpg" data-lightbox="kotas" data-title="Veggie Delight Kota - R22">
+          <img src="../assets/Kota.jpg" alt="Veggie Delight Kota">
+
         </a>
       </div>
     </section>
+
 
     <!-- Tabs Section -->
     <section class="tabs-section">
@@ -316,6 +383,8 @@
         </div>
       </div>
     </section>
+
+
 
     <!-- FAQ Accordion -->
     <section class="faq-section">
@@ -376,6 +445,7 @@
     });
 
     // Tabs functionality
+
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabPanels = document.querySelectorAll('.tab-panel');
 
@@ -413,3 +483,31 @@
   </script>
 </body>
 </html>
+
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const allItems = document.querySelectorAll(".menu-item");
+
+    tabButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        // Remove active class from all buttons
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+        // Add active class to clicked button
+        button.classList.add("active");
+
+        const category = button.getAttribute("data-category");
+
+        allItems.forEach(item => {
+          if (category === "all" || item.getAttribute("data-category") === category) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
