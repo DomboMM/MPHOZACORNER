@@ -1,0 +1,11 @@
+# robots.txt for Mphoza Corner Kotas
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private areas (if any)
+Disallow: /private/
+Disallow: /temp/
+
+# Sitemap location
+Sitemap: https://dombomm.github.io/MPHOZACORNER/sitemap.xml

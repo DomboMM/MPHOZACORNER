@@ -1,50 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mphoza' Corner Kotas</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Mphoza' Corner Kotas | Best Kotas in Polokwane</title>
+  <meta name="description" content="Mphoza' Corner Kotas serves the best township Kotas in Polokwane. Try our Full House, Chicken Specials, and more!">
+  <meta name="keywords" content="Mphoza Kotas, Polokwane Kotas, township food, South African fast food, kota shop, Full House Kota, Chicken Kota">
+  <meta name="author" content="Mphoza' Corner Kotas">
+
+  <!-- Social Media / Open Graph -->
+  <meta property="og:title" content="Mphoza' Corner Kotas | Best Kotas in Polokwane">
+  <meta property="og:description" content="Delicious township kotas made fresh daily in Polokwane. Visit us today!">
+  <meta property="og:image" content="assets/mphoza.jpg.jpeg">
+  <meta property="og:url" content="https://dombomm.github.io/MPHOZACORNER/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/mphoza.jpg.jpeg" type="image/jpeg">
+
+  <!-- Lightbox CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {font-family: Arial,sans-serif;margin:0;padding:0;line-height:1.6;background:#f9f9f9;color:#333;}
+    .main-nav {background:#e63946;text-align:center;padding:15px 0;}
+    .nav-list {list-style:none;margin:0;padding:0;display:flex;justify-content:center;gap:30px;}
+    .nav-list li a {text-decoration:none;color:#fff;font-weight:bold;font-size:1.1rem;transition:color 0.3s;}
+    .nav-list li a:hover, .nav-list li a[aria-current="page"] {color:#ffd166;}
+    .hero-section {text-align:center;background:#e63946;color:#fff;padding:60px 20px;border-radius:10px;margin:20px auto;}
+    .hero-section h1 {font-size:3rem;margin-bottom:20px;}
+    .hero-section p {font-size:1.2rem;}
+    .hero-section img {max-width:600px;width:100%;border-radius:10px;margin-top:20px;border:5px solid #fff;}
+    .main-footer {text-align:center;padding:20px;background:#333;color:#fff;}
+    .main-footer a {color:#f1faee;margin:0 5px;text-decoration:none;}
+    .main-footer a:hover {color:#ffd166;}
+    /* Dynamic section styling */
+    .dynamic-section {
+      text-align: center;
+      background: #fff3cd;
+      color: #333;
+      padding: 25px 15px;
+      margin: 30px auto;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    /* Modal styling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 500px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    .close-modal {
+      background: #e63946;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .close-modal:hover {
+      background: #c92c3b;
+    }
+  </style>
 </head>
 <body>
-    <!-- Hamburger Menu Button -->
-    <div class="hamburger-menu">
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="hamburger-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
 
-        <!-- Navigation Menu -->
-        <nav class="main-nav">
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="./page/about.html">About Us</a></li>
-                <li><a href="./page/products.html">Our Menu</a></li>
-                <li><a href="./page/enquiry.html">Enquiry</a></li>
-                <li><a href="./page/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+<nav class="main-nav">
+  <ul class="nav-list">
+    <li><a href="index.html" aria-current="page">Home</a></li>
+    <li><a href="pages/about.html">About Us</a></li>
+    <li><a href="pages/products.html">Our Menu</a></li>
+    <li><a href="pages/enquiry.html">Enquiry</a></li>
+    <li><a href="pages/contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <header class="hero-section">
-            <h1>Welcome to Mphoza Corner Kotas</h1>
-            <h2>Delicious Kotas Just for You!</h2>
-            <img src="./assets/OIP.jpg" alt="Kotas" class="hero-image">
-        </header>
-    </main>
+<section class="hero-section">
+<h1>Welcome to Mphoza Corner Kotas!</h1>
+<p>Serving the tastiest Kotas in Polokwane. Fresh, delicious, and affordable.</p>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-        <p>&copy; 2025 Mphoza' Corner Kotas</p>
-        <p>Follow us on:
-            <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
-            <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
-            <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
-        </p>
-    </footer>
+<a href="assets/unnamed.jpg" data-lightbox="hero" data-title="Mphoza Corner Kotas">
+  <img src="assets/unnamed.jpg" alt="Mphoza Corner Kotas">
+</a>
+
+<button id="specialOfferBtn" style="background: #ffd166; color: #333; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; margin-top: 20px; cursor: pointer;">View Special Offer</button>
+</section>
+
+<!-- 🔥 Dynamic Real-Time Content Section -->
+<section class="dynamic-section">
+  <h2 id="dailyMessage"></h2>
+  <p id="currentTime"></p>
+  <button id="specialOfferBtn" style="background: #e63946; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px;">Special Offer!</button>
+</section>
+
+<!-- Special Offer Modal -->
+<div id="specialModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>🎉 Special Offer!</h2>
+    <p>Get 20% off on your first Kota order! Use code: WELCOME20</p>
+    <p>Valid until end of month.</p>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="specialModal" class="modal">
+  <div class="modal-content">
+    <h2>🔥 Special Offer!</h2>
+    <p>Get 20% off on your first order! Use code: WELCOME20</p>
+    <button class="close-modal">Close</button>
+  </div>
+</div>
+
+<footer class="main-footer">
+<p>&copy; 2025 Mphoza' Corner Kotas</p>
+<p>
+Follow us on:
+<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a> |
+<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a> |
+<a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
+</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+<script src="js/script.js"></script>
+
+<!-- Dynamic Section Script -->
+<script>
+  // Random daily message
+  const messages = [
+    "🔥 Today’s Special: Full House Kota – Only R35!",
+    "🍗 Try our Chicken Special and get a free drink!",
+    "🧀 Cheese Lovers! Don’t miss our Cheese & Chips Kota!",
+    "🥩 Hungry? Grab our Big Boss Kota with extra meat!",
+    "🍟 Add chips to any Kota for just R10 extra!"
+  ];
+  const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+  document.getElementById("dailyMessage").textContent = randomMessage;
+
+  // Live clock update
+  function updateTime() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    document.getElementById("currentTime").textContent = "⏰ Current Time: " + timeString;
+  }
+  updateTime();
+  setInterval(updateTime, 1000);
+
+  // Modal functionality
+  const modal = document.getElementById("specialModal");
+  const btn = document.getElementById("specialOfferBtn");
+  const span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
+</script>
+
 </body>
 </html>
