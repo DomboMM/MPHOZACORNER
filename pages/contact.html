@@ -6,10 +6,8 @@
   <title>Contact | Mphoza Corner Kotas</title>
   <meta name="description" content="Contact Mphoza Corner Kotas or find us on the map.">
 
-  <meta name="keywords" content="Contact Mphoza Kotas, Polokwane Kotas, Google Map">
-  <link rel="icon" href="../assets/founder-mphoza.jpg" type="image/jpeg" />
-
   <meta name="keywords" content="Contact Mphoza Kotas, Polokwane Kotas, Interactive Map">
+  <link rel="icon" href="../assets/founder-mphoza.jpg" type="image/jpeg" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
@@ -53,17 +51,57 @@
 </nav>
 
 <div class="container">
-  <h1>Contact Us</h1>
+  <h1>Get In Touch:</h1>
+  <table>
+    <tr>
+      <td width="100">Telephone Number:</td>
+      <td width="200">(+27 721294988 )</td>
+    </tr>
+    <tr>
+      <td width="100">Physical Address:</td>
+      <td width="100">29 devenish,<br/>Polokwane,<br/>0700</td>
+    </tr>
+    
+    </tr>
+  </table>
 
   <form id="contactForm">
-    <input type="text" id="contactName" placeholder="Your Name" required>
-    <input type="email" id="contactEmail" placeholder="Your Email" required>
-    <textarea id="contactMsg" rows="5" placeholder="Your message..." required></textarea>
-    <button type="submit">Send Message</button>
+    <table>
+      <tr>
+        <td width="150">Name:</td>
+        <td><input type="text" name="contactName" id="contactName" placeholder="Enter your name"></td>
+      </tr>
+      <tr>
+        <td width="150">Surname:</td>
+        <td><input type="text" name="contactSurname" id="contactSurname" placeholder="Enter your surname"></td>
+      </tr>
+      <tr>
+        <td width="150">Email:</td>
+        <td><input type="email" name="contactEmail" id="contactEmail" placeholder="Enter your email"></td>
+      </tr>
+      <tr>
+        <td width="150">Message:</td>
+        <td>
+          <textarea cols="25" rows="5" name="contactMsg" id="contactMsg"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td width="150"></td>
+        <td>
+          <p class="error" id="contactError"></p>
+        </td>
+      </tr>
+      <tr>
+        <td width="150"></td>
+        <td><button type="submit">Send Message</button></td>
+      </tr>
+    </table>
   </form>
 
-  <p class="success" id="contactSuccess">✅ Your message has been sent successfully!</p>
-  <p class="error" id="contactError">❌ Please fill in all fields correctly.</p>
+
+
+
+
 
   <div id="map" class="map"></div>
 </div>
@@ -79,12 +117,14 @@ Follow us on:
 </footer>
 
 
+
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
   (function(){
     emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
   })();
-
+</script>
+<script>
   // Initialize Leaflet map
   const map = L.map('map').setView([-23.9044, 29.4648], 13); // Polokwane coordinates
 
@@ -100,15 +140,16 @@ Follow us on:
   document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const name = document.getElementById('contactName').value.trim();
+    const surname = document.getElementById('contactSurname').value.trim();
     const email = document.getElementById('contactEmail').value.trim();
     const msg = document.getElementById('contactMsg').value.trim();
     const success = document.getElementById('contactSuccess');
     const error = document.getElementById('contactError');
 
-    if (name && email.includes('@') && msg) {
+    if (name && surname && email.includes('@') && msg) {
       // Send email using EmailJS
       emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-        from_name: name,
+        from_name: `${name} ${surname}`,
         from_email: email,
         message: msg,
         to_name: "Mphoza Corner Kotas"
@@ -125,6 +166,7 @@ Follow us on:
         success.style.display = 'none';
       });
     } else {
+      error.textContent = 'All fields are required and email must be valid.';
       error.style.display = 'block';
       success.style.display = 'none';
     }

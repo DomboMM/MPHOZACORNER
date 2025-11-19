@@ -6,9 +6,9 @@
   <title>Enquiry | Mphoza Corner Kotas</title>
   <meta name="description" content="Send your enquiry to Mphoza Corner Kotas in Polokwane.">
   <meta name="keywords" content="Mphoza Kotas enquiry, contact Mphoza Kotas">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 
-  <link rel="icon" href="/assets/founder-mphoza.jpg" type="image/jpeg" />
+  <link rel="icon" href="../assets/founder-mphoza.jpg" type="image/jpeg" />
 
 
   <style>
@@ -51,15 +51,38 @@
 <div class="container">
   <h1>Send Us Your Enquiry</h1>
 
-  <form id="enquiryForm">
-    <input type="text" id="name" placeholder="Full Name" required>
-    <input type="email" id="email" placeholder="Email Address" required>
-    <textarea id="message" rows="5" placeholder="Your message..." required></textarea>
-    <button type="submit">Submit Enquiry</button>
+  <form action="mailto:ezilemajikijela94@gmail.com" method="post" onsubmit="return validateForm()">
+    <table>
+      <tr>
+        <td width="150">Name:</td>
+        <td><input type="text" name="name" id="name" placeholder="Enter your name"></td>
+      </tr>
+      <tr>
+        <td width="150">Surname:</td>
+        <td><input type="text" name="surname" id="surname" placeholder="Enter your surname"></td>
+      </tr>
+      <tr>
+        <td width="150">Email:</td>
+        <td><input type="email" name="email" id="email" placeholder="Enter your email"></td>
+      </tr>
+      <tr>
+        <td width="150">Message:</td>
+        <td>
+          <textarea cols="25" rows="5" name="message" id="message"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td width="150"></td>
+        <td>
+          <p class="error" id="errorMessage"></p>
+        </td>
+      </tr>
+      <tr>
+        <td width="150"></td>
+        <td><input type="submit" name="submit" value="Submit Enquiry"></td>
+      </tr>
+    </table>
   </form>
-
-  <p class="success" id="successMsg">✅ Thank you! Your enquiry has been submitted.</p>
-  <p class="error" id="errorMsg">❌ Please fill in all fields correctly.</p>
 </div>
 
 <footer class="main-footer">
@@ -73,19 +96,24 @@ Follow us on:
 </footer>
 
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
+
   (function(){
     emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
   })();
 
   document.getElementById('enquiryForm').addEventListener('submit', function(e) {
     e.preventDefault();
+
+  //Form Input validation
+  function validateForm(){
+
     const name = document.getElementById('name').value.trim();
+    const surname = document.getElementById('surname').value.trim();
     const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    const successMsg = document.getElementById('successMsg');
-    const errorMsg = document.getElementById('errorMsg');
+    const message = document.getElementById('message').value;
+    const errorMessage = document.getElementById('errorMessage');
+
 
     if (name && email.includes('@') && message) {
       // Send email using EmailJS
@@ -109,10 +137,26 @@ Follow us on:
     } else {
       errorMsg.style.display = 'block';
       successMsg.style.display = 'none';
+
+    errorMessage.textContent = '';
+    //validate input fields
+    if(name === '' || email === '' || surname === '' || message === ''){
+      errorMessage.textContent = 'All input fields are required!!!';
+      return false;
+
     }
-  });
+
+    //validate email
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+    if(!email.match(emailPattern)){
+      errorMessage.textContent = 'Incorrect email format!!!';
+      return false;
+    }
+
+    alert("Your form was submitted successfully!!!");
+    return true;
+  }
 </script>
 
 </body>
 </html>
-

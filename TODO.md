@@ -1,3 +1,19 @@
+# TODO: Apply Specified Fixes
+
+## index.html
+- [ ] Remove duplicate modal CSS definitions (.modal and .modal-content)
+
+## pages/about.html
+- [ ] Add missing closing tags for content-section, main, footer, body, and html
+
+## pages/enquiry.html
+- [ ] Update absolute paths to relative paths for CSS and assets
+
+## pages/products.html
+- [ ] Remove duplicate <!DOCTYPE html>
+- [ ] Fix modal image path to relative
+
+
 # TODO: Fix Website Codes
 
 ## General Fixes
@@ -33,3 +49,19 @@
 ## Additional
 - [ ] Check if contact.html exists; if not, create or remove links
 - [ ] Test functionality after fixes
+
+# TODO: Apply Specified Fixes
+
+## index.html
+- [ ] Remove duplicate modal CSS definitions (.modal and .modal-content)
+
+## pages/about.html
+- [ ] Add missing closing tags for content-section, main, footer, body, and html
+
+## pages/enquiry.html
+- [ ] Update absolute paths to relative paths for CSS and assets
+
+## pages/products.html
+- [ ] Remove duplicate <!DOCTYPE html>
+- [ ] Fix modal image path to relative
+
