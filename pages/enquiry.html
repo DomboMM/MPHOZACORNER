@@ -4,90 +4,181 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enquiry | Mphoza Corner Kotas</title>
-  <meta name="description" content="Send your enquiry to Mphoza Corner Kotas in Polokwane.">
-  <meta name="keywords" content="Mphoza Kotas enquiry, contact Mphoza Kotas">
-  <link rel="stylesheet" href="/css/style.css">
+  <meta name="description" content="Get in touch with Mphoza Corner Kotas for enquiries, orders, or feedback. We're here to serve you!">
+  <meta name="keywords" content="Enquiry Mphoza Kotas, Contact Polokwane Kotas, Order Kotas">
+  <link rel="icon" href="/assets/founder-mphoza.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="/css/style.css" />
   <style>
-    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; color: #333; }
-    .main-nav { background: #e63946; text-align: center; padding: 15px 0; }
-    .nav-list { list-style: none; display: flex; justify-content: center; gap: 30px; padding: 0; margin: 0; }
-    .nav-list li a { color: #fff; text-decoration: none; font-weight: bold; }
-    .nav-list li a:hover { color: #ffd166; }
-    .container { max-width: 600px; margin: 40px auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    h1 { text-align: center; color: #e63946; }
-    input, textarea, button {
-      width: 100%; padding: 10px; margin: 10px 0;
-      border: 1px solid #ccc; border-radius: 5px;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
     }
-    button {
-      background: #e63946; color: #fff; font-weight: bold; border: none;
-      transition: background 0.3s;
+    .main-nav {
+      background-color: #e63946;
+      text-align: center;
+      padding: 15px 0;
     }
-    button:hover { background: #c92c3b; }
-    .success, .error { text-align: center; padding: 10px; display: none; border-radius: 5px; }
-    .success { background: #1dd1a1; color: #fff; }
-    .error { background: #ff6b6b; color: #fff; }
-    .main-footer { text-align: center; padding: 20px; background:#333; color:#fff; }
-    .main-footer a { color:#f1faee; margin:0 5px; text-decoration:none; }
-    .main-footer a:hover { color:#ffd166; }
+    .nav-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    .nav-list li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    .nav-list li a:hover,
+    .nav-list li a[aria-current="page"] {
+      color: #ffd166;
+    }
+    .enquiry-section {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .enquiry-section h1 {
+      text-align: center;
+      color: #e63946;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .form-group textarea {
+      height: 100px;
+      resize: vertical;
+    }
+    .submit-btn {
+      background-color: #e63946;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s;
+    }
+    .submit-btn:hover {
+      background-color: #c92c3b;
+    }
+    .success-msg {
+      display: none;
+      background-color: #d4edda;
+      color: #155724;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 15px;
+      text-align: center;
+    }
+    .main-footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+    }
+    .main-footer a {
+      color: #f1faee;
+      margin: 0 5px;
+      text-decoration: none;
+    }
+    .main-footer a:hover {
+      color: #ffd166;
+    }
   </style>
 </head>
 <body>
+  <nav class="main-nav">
+    <ul class="nav-list">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/pages/about.html">About Us</a></li>
+      <li><a href="/pages/products.html">Our Menu</a></li>
+      <li><a href="/pages/enquiry.html" aria-current="page">Enquiry</a></li>
+      <li><a href="/pages/contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<nav class="main-nav">
-  <ul class="nav-list">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="products.html">Our Menu</a></li>
-    <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <section class="enquiry-section">
+    <h1>Enquire Now</h1>
+    <form id="enquiryForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Enquiry</button>
+    </form>
+    <div id="successMsg" class="success-msg">
+      Thank you for your enquiry! We'll get back to you soon.
+    </div>
+  </section>
 
-<div class="container">
-  <h1>Send Us Your Enquiry</h1>
+  <footer class="main-footer">
+    <p>&copy; 2025 Mphoza' Corner Kotas</p>
+    <p>
+      Follow us on:
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a> |
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a> |
+      <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
+    </p>
+  </footer>
 
-  <form id="enquiryForm">
-    <input type="text" id="name" placeholder="Full Name" required>
-    <input type="email" id="email" placeholder="Email Address" required>
-    <textarea id="message" rows="5" placeholder="Your message..." required></textarea>
-    <button type="submit">Submit Enquiry</button>
-  </form>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
 
-  <p class="success" id="successMsg">✅ Thank you! Your enquiry has been submitted.</p>
-  <p class="error" id="errorMsg">❌ Please fill in all fields correctly.</p>
-</div>
-
-<footer class="main-footer">
-<p>&copy; 2025 Mphoza' Corner Kotas</p>
-<p>
-Follow us on:
-<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a> |
-<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a> |
-<a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
-</p>
-</footer>
-
-<script>
-  document.getElementById('enquiryForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    const successMsg = document.getElementById('successMsg');
-    const errorMsg = document.getElementById('errorMsg');
-
-    if (name && email.includes('@') && message) {
-      successMsg.style.display = 'block';
-      errorMsg.style.display = 'none';
-      this.reset();
-    } else {
-      errorMsg.style.display = 'block';
-      successMsg.style.display = 'none';
-    }
-  });
-</script>
-
+      if (name && email.includes('@') && message) {
+        // Send email using EmailJS
+        emailjs.send("service_id", "template_id", {
+          from_name: name,
+          from_email: email,
+          message: message,
+        }).then(function(response) {
+          document.getElementById('successMsg').style.display = 'block';
+          document.getElementById('enquiryForm').reset();
+        }, function(error) {
+          alert('Failed to send enquiry. Please try again.');
+        });
+      } else {
+        alert('Please fill in all fields correctly.');
+      }
+    });
+  </script>
 </body>
 </html>
-
