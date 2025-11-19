@@ -40,18 +40,11 @@
 
 <nav class="main-nav">
   <ul class="nav-list">
-
-    <li><a href="/index.html">Home</a></li>
-    <li><a href="/pages/about.html">About Us</a></li>
-    <li><a href="/pages/products.html">Our Menu</a></li>
-    <li><a href="/pages/enquiry.html" aria-current="page">Enquiry</a></li>
-    <li><a href="/pages/contact.html">Contact</a></li
     <li><a href="../index.html">Home</a></li>
     <li><a href="about.html">About Us</a></li>
     <li><a href="products.html">Our Menu</a></li>
     <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
     <li><a href="contact.html">Contact</a></li>
-
   </ul>
 </nav>
 
@@ -86,9 +79,6 @@ Follow us on:
     emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
   })();
 
-
-<script>
-
   document.getElementById('enquiryForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const name = document.getElementById('name').value.trim();
@@ -98,7 +88,6 @@ Follow us on:
     const errorMsg = document.getElementById('errorMsg');
 
     if (name && email.includes('@') && message) {
-
       // Send email using EmailJS
       emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
         from_name: name,
@@ -117,11 +106,6 @@ Follow us on:
         errorMsg.style.display = 'block';
         successMsg.style.display = 'none';
       });
-
-      successMsg.style.display = 'block';
-      errorMsg.style.display = 'none';
-      this.reset();
-
     } else {
       errorMsg.style.display = 'block';
       successMsg.style.display = 'none';
